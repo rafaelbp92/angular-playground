@@ -1,0 +1,14 @@
+<h1>Attribute Directives</h1>
+
+<div
+  [ngClass]="{ right: direction === 'right', left: direction === 'left' }"
+  [ngStyle]="{ 'background-color': direction === 'right' ? 'red' : 'green' }"
+>
+  Attribute Directives Example
+</div>
+
+<div maximize color="grey">Custom Attribute Directive</div>
+
+<div *notIf="condition">Custom Structural Directive</div>
+
+<button (click)="changeDirection()">Change Direction</button>

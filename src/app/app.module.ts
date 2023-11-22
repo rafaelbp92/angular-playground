@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { PipesModule } from './pipes/pipes.module';
+import { DirectivesPlaygroundModule } from './directives-playground/directives-playground.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PipesModule } from './pipes/pipes.module';
     BrowserModule,
     PostModule,
     PipesModule,
+    DirectivesPlaygroundModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot(),

@@ -10,6 +10,10 @@ import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { PipesModule } from './pipes/pipes.module';
 import { DirectivesPlaygroundModule } from './directives-playground/directives-playground.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,9 @@ import { DirectivesPlaygroundModule } from './directives-playground/directives-p
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
     PostModule,
     PipesModule,
     DirectivesPlaygroundModule,
@@ -26,7 +33,8 @@ import { DirectivesPlaygroundModule } from './directives-playground/directives-p
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

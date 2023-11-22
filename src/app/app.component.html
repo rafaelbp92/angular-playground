@@ -1,7 +1,17 @@
-<router-outlet></router-outlet>
+<div class="routerOutlet">
+  <router-outlet></router-outlet>
+</div>
 
-<ul>
-    <li><a routerLink="pipes">Pipes</a></li>
-    <li><a routerLink="redux">NgRx</a></li>
-    <li><a routerLink="attributeDirectives">Attribute Directives</a></li>
-</ul>
+<!-- <ul>
+  <li><a routerLink="pipes">Pipes</a></li>
+  <li><a routerLink="redux">NgRx</a></li>
+  <li><a routerLink="attributeDirectives">Attribute Directives</a></li>
+</ul> -->
+
+<mat-toolbar>
+  <span>Angular Playground</span>
+  <span class="example-spacer"></span>
+  <a routerLink="pipes">Pipes</a>
+  <a routerLink="redux">NgRx</a>
+  <a routerLink="attributeDirectives">Attribute Directives</a>
+</mat-toolbar>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AttributeDirectivesComponent } from './components/attribute-directives/attribute-directives.component';
 import { MaximixeDirective } from './maximize.directive';
 import { NotIfDirective } from './notif.directive';
-
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { NotIfDirective } from './notif.directive';
     NotIfDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule
   ],
 })
 export class DirectivesPlaygroundModule { }

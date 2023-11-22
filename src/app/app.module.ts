@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { FormsPlaygroundModule } from './reactive-forms/forms-playground.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     PostModule,
     PipesModule,
     DirectivesPlaygroundModule,
+    FormsPlaygroundModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot(),

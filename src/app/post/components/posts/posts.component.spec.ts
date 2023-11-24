@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostsComponent } from './posts.component';
+import {StoreModule, provideStore} from '@ngrx/store';
+import { CommonModule } from '@angular/common';
+import { reducers } from '../../store/reducers';
 
 describe('PostsComponent', () => {
   let component: PostsComponent;
@@ -8,7 +11,11 @@ describe('PostsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostsComponent ]
+      declarations: [ PostsComponent ],
+      imports: [
+        CommonModule,
+        StoreModule.forRoot({}),
+      ]
     })
     .compileComponents();
 

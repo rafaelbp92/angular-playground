@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AttributeDirectivesComponent } from './attribute-directives.component';
+import { NotIfDirective } from '../../notif.directive';
+import { MaximixeDirective } from '../../maximize.directive';
 
 describe('AttributeDirectivesComponent', () => {
   let component: AttributeDirectivesComponent;
@@ -8,7 +10,7 @@ describe('AttributeDirectivesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AttributeDirectivesComponent ]
+      declarations: [ AttributeDirectivesComponent, NotIfDirective, MaximixeDirective ]
     })
     .compileComponents();
 

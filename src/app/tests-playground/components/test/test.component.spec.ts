@@ -23,9 +23,21 @@ describe('TestComponent', () => {
 
   it('renders default message', () => {
     const messageContainer = fixture.debugElement.query(
-      By.css('[data-testid]="message-container"')
+      By.css('[data-testid="message-container"]')
     );
 
-    expect(messageContainer.nativeElement.textContent).toBe('Error');
+    expect(messageContainer.nativeElement.textContent).toContain('Message test');
+  });
+
+  it('renders input message', () => {
+    const message = 'Input 1';
+    fixture.componentInstance.message = message;
+    fixture.detectChanges();
+
+    const messageContainer = fixture.debugElement.query(
+      By.css('[data-testid="message-container"]')
+    );
+
+    expect(messageContainer.nativeElement.textContent).toContain(message);
   });
 });

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TestComponent } from './test.component';
 import { By } from '@angular/platform-browser';
+import { first } from 'rxjs';
 
 describe('TestComponent', () => {
   let component: TestComponent;
@@ -26,12 +27,14 @@ describe('TestComponent', () => {
       By.css('[data-testid="message-container"]')
     );
 
-    expect(messageContainer.nativeElement.textContent).toContain('Message test');
+    expect(messageContainer.nativeElement.textContent).toContain(
+      'Message test'
+    );
   });
 
   it('renders input message', () => {
     const message = 'Input 1';
-    fixture.componentInstance.message = message;
+    component.message = message;
     fixture.detectChanges();
 
     const messageContainer = fixture.debugElement.query(
@@ -39,5 +42,17 @@ describe('TestComponent', () => {
     );
 
     expect(messageContainer.nativeElement.textContent).toContain(message);
+  });
+
+  it('should emit a click event', () => {
+    let valueEmitted: number | undefined;
+    component.outputEvent.pipe(first()).subscribe((value) => {
+      valueEmitted = value;
+    });
+    const button = fixture.debugElement.query(
+      By.css('[data-testid="emit-button"]')
+    );
+    button.triggerEventHandler('click');
+    expect(valueEmitted).toBe(1);
   });
 });

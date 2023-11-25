@@ -3,14 +3,19 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TestComponent } from './test.component';
 import { By } from '@angular/platform-browser';
 import { first } from 'rxjs';
+import { UtilService } from '../../services/utils.service';
 
 describe('TestComponent', () => {
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
+  const mockUtilsService = {
+    getLettersArray: () => { return ['a', 'b'] }
+  }
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TestComponent],
+      providers: [{provide: UtilService, useValue: mockUtilsService}]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);

@@ -1,4 +1,10 @@
-# AngularTestApp
+# Angular Playground
+
+The purpose of this project is to aid in the studies of the Angular Framework,
+with some examples of concepts and libraries like NgRx, RxJS, Unit Tests, Pipes, Directives etc..
+
+![Home page](prints/Screenshot_Angular_Playgorund_1.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 

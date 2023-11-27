@@ -1,7 +1,7 @@
 # Angular Playground
 
 The purpose of this project is to aid in the studies of the Angular Framework,
-with some examples of concepts and libraries like NgRx, RxJS, Unit Tests, Pipes, Directives etc..
+with some examples of concepts and libraries like NgRx, RxJS, Unit Tests, Pipes, Directivesm Angular Material etc..
 
 ![Home page](prints/Screenshot_Angular_Playgorund_1.png)
 

@@ -1,8 +1,21 @@
-<p>Pipes Examples!</p>
+<div class="container">
+  <h1>Pipes Examples!</h1>
 
-<p>Uppercase: {{ name | uppercase }}</p>
-<p>Lowercase: {{ name | lowercase }}</p>
-<p>Slice: {{ name | slice: 4 }}</p>
-<p>Date: {{ dateExample | date }}</p>
-<p>Date (short): {{ dateExample | date: 'short' }}</p>
-<p>Reverse (custom): {{ name | reversepipe }}</p>
+  <p><span class="font-weight-bold">Original label:</span> {{ name }}</p>
+  <p><span class="font-weight-bold">Original Date:</span> {{ dateExample }}</p>
+
+  <mat-divider></mat-divider>
+
+  <p><span class="font-weight-bold">Uppercase:</span> {{ name | uppercase }}</p>
+  <pre><code>name | uppercase</code></pre>
+  <p><span class="font-weight-bold">Lowercase:</span> {{ name | lowercase }}</p>
+  <pre><code>name | lowercase</code></pre>
+  <p><span class="font-weight-bold">Slice:</span> {{ name | slice : 4 }}</p>
+  <pre><code> name | slice: 4</code></pre>
+  <p><span class="font-weight-bold">Date:</span> {{ dateExample | date }}</p>
+  <pre><code>dateExample | date</code></pre>
+  <p><span class="font-weight-bold">Date (short):</span> {{ dateExample | date : "short" }}</p>
+  <pre><code>dateExample | date: 'short'</code></pre>
+  <p><span class="font-weight-bold">Reverse (custom):</span> {{ name | reversepipe }}</p>
+  <pre><code>name | reversepipe</code></pre>
+</div>

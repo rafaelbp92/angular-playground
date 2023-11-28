@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { CustomPipe } from './customPipe';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -11,7 +12,8 @@ import { CustomPipe } from './customPipe';
     CustomPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatDividerModule
   ]
 })
 export class PipesModule { }
